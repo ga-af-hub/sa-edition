@@ -103,6 +103,25 @@
         <div id = box>
             <input type = file id = input>
             Drag ROM file or click here
+            <!-- URL Input Section -->
+            <div style="margin-top: 10px; display: flex; flex-direction: column; align-items: center;">
+                <input type="text" id="urlInput" placeholder="Enter URL here"
+                       style="padding: 0.6em 0.4em; margin: 0.5em; width: 15em; max-width: 100%;
+                              font-family: monospace; font-weight: bold; font-size: 16px;
+                              background-color: #222; color: #aaa; border-radius: 0.4em;
+                              border: 1px solid #555;">
+                <button onclick="submitUrl()">Submit</button>
+            </div>
+            
+            <script>
+                let url = "";
+            
+                function submitUrl() {
+                    url = document.getElementById("urlInput").value;
+                    console.log("Submitted URL:", url);
+                    // You can use `url` for loading ROMs or other functionality
+                }
+            </script>
         </div>
 
         <script>
